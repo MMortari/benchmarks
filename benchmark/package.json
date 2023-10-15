@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:load": "k6 run k6-script.js"
+    "test:stress": "k6 run k6-stress.js",
+    "test:breakpoint": "k6 run k6-breakpoint.js"
   },
   "keywords": [],
   "author": "",

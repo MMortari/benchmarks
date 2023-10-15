@@ -1,4 +1,4 @@
-@base = http://localhost:3333
+@base = http://localhost:3332
 
 # @name test
 GET {{base}}
@@ -19,7 +19,7 @@ GET {{base}}/user
 
 ###
 # @name get
-GET {{base}}/user/da94c9f4-a35b-4115-b773-bf914bd1b7a2
+GET {{base}}/user/63009d6a-7919-45c2-919b-8a5a947960e1
 
 
 ###

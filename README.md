@@ -2,7 +2,9 @@
 
 ## Go Results
 
-10 VUs
+### 10 VUs
+
+#### Golang
 
 ```text
 data_received..................: 103 kB 1.3 kB/s
@@ -23,7 +25,30 @@ vus............................: 1      min=1      max=10
 vus_max........................: 10     min=10     max=10
 ```
 
-100 VUs
+#### Nodejs
+
+```text
+data_received..................: 186 kB 2.3 kB/s
+data_sent......................: 127 kB 1.6 kB/s
+http_req_blocked...............: avg=19.96µs min=2µs    med=7µs    max=3.33ms  p(90)=9µs    p(95)=12µs
+http_req_connecting............: avg=5.67µs  min=0s     med=0s     max=872µs   p(90)=0s     p(95)=0s
+http_req_duration..............: avg=5.72ms  min=1.83ms med=5.59ms max=40.52ms p(90)=7.28ms p(95)=7.97ms
+  { expected_response:true }...: avg=5.72ms  min=1.83ms med=5.59ms max=40.52ms p(90)=7.28ms p(95)=7.97ms
+http_req_failed................: 0.00%  ✓ 0        ✗ 705
+http_req_receiving.............: avg=69.29µs min=24µs   med=65µs   max=979µs   p(90)=81µs   p(95)=88.79µs
+http_req_sending...............: avg=47µs    min=13µs   med=40µs   max=2.45ms  p(90)=49µs   p(95)=60µs
+http_req_tls_handshaking.......: avg=0s      min=0s     med=0s     max=0s      p(90)=0s     p(95)=0s
+http_req_waiting...............: avg=5.6ms   min=1.74ms med=5.47ms max=40.17ms p(90)=7.14ms p(95)=7.86ms
+http_reqs......................: 705    8.742745/s
+iteration_duration.............: avg=1s      min=1s     med=1s     max=1.04s   p(90)=1s     p(95)=1s
+iterations.....................: 705    8.742745/s
+vus............................: 1      min=1      max=10
+vus_max........................: 10     min=10     max=10
+```
+
+### 100 VUs
+
+#### Golang
 
 ```text
 data_received..................: 1.0 MB 13 kB/s
@@ -44,7 +69,30 @@ vus............................: 6      min=6       max=100
 vus_max........................: 100    min=100     max=100
 ```
 
-500 VUs
+#### Nodejs
+
+```text
+data_received..................: 1.8 MB 23 kB/s
+data_sent......................: 1.3 MB 16 kB/s
+http_req_blocked...............: avg=13.57µs min=0s    med=3µs    max=9.16ms  p(90)=7µs     p(95)=9µs
+http_req_connecting............: avg=7.38µs  min=0s    med=0s     max=9.11ms  p(90)=0s      p(95)=0s
+http_req_duration..............: avg=10.05ms min=773µs med=8ms    max=79.78ms p(90)=20.69ms p(95)=24.47ms
+  { expected_response:true }...: avg=10.05ms min=773µs med=8ms    max=79.78ms p(90)=20.69ms p(95)=24.47ms
+http_req_failed................: 0.00%  ✓ 0         ✗ 6985
+http_req_receiving.............: avg=58.72µs min=6µs   med=33µs   max=9.19ms  p(90)=81µs    p(95)=103µs
+http_req_sending...............: avg=28.61µs min=3µs   med=15µs   max=15.53ms p(90)=36µs    p(95)=50.79µs
+http_req_tls_handshaking.......: avg=0s      min=0s    med=0s     max=0s      p(90)=0s      p(95)=0s
+http_req_waiting...............: avg=9.97ms  min=741µs med=7.92ms max=79.26ms p(90)=20.61ms p(95)=24.39ms
+http_reqs......................: 6985   86.314022/s
+iteration_duration.............: avg=1.01s   min=1s    med=1s     max=1.08s   p(90)=1.02s   p(95)=1.02s
+iterations.....................: 6985   86.314022/s
+vus............................: 6      min=6       max=100
+vus_max........................: 100    min=100     max=100
+```
+
+### 500 VUs
+
+#### Golang
 
 ```text
 data_received..................: 5.0 MB 62 kB/s
@@ -65,7 +113,30 @@ vus............................: 30     min=30       max=500
 vus_max........................: 500    min=500      max=500
 ```
 
-1000 VUs
+#### Nodejs
+
+```text
+data_received..................: 9.2 MB 114 kB/s
+data_sent......................: 6.3 MB 78 kB/s
+http_req_blocked...............: avg=10.18µs min=0s    med=3µs    max=7.88ms   p(90)=5µs     p(95)=6µs
+http_req_connecting............: avg=5.35µs  min=0s    med=0s     max=1.84ms   p(90)=0s      p(95)=0s
+http_req_duration..............: avg=6.94ms  min=631µs med=2.9ms  max=202.52ms p(90)=16.39ms p(95)=25.04ms
+  { expected_response:true }...: avg=6.94ms  min=631µs med=2.9ms  max=202.52ms p(90)=16.39ms p(95)=25.04ms
+http_req_failed................: 0.00%  ✓ 0          ✗ 35021
+http_req_receiving.............: avg=38.91µs min=6µs   med=23µs   max=11.23ms  p(90)=53µs    p(95)=71µs
+http_req_sending...............: avg=21.17µs min=2µs   med=11µs   max=13.39ms  p(90)=26µs    p(95)=36µs
+http_req_tls_handshaking.......: avg=0s      min=0s    med=0s     max=0s       p(90)=0s      p(95)=0s
+http_req_waiting...............: avg=6.88ms  min=599µs med=2.84ms max=202.44ms p(90)=16.32ms p(95)=24.97ms
+http_reqs......................: 35021  433.442004/s
+iteration_duration.............: avg=1s      min=1s    med=1s     max=1.2s     p(90)=1.01s   p(95)=1.02s
+iterations.....................: 35021  433.442004/s
+vus............................: 39     min=39       max=500
+vus_max........................: 500    min=500      max=500
+```
+
+### 1000 VUs
+
+#### Golang
 
 ```text
 data_received..................: 5.0 MB 58 kB/s
@@ -84,4 +155,25 @@ iteration_duration.............: avg=2.06s   min=1s    med=1.76s    max=1m1s    
 iterations.....................: 34306  398.575024/s
 vus............................: 1      min=1        max=1000
 vus_max........................: 1000   min=1000     max=1000
+```
+
+#### Nodejs
+
+```text
+data_received..................: 19 MB 229 kB/s
+data_sent......................: 13 MB 157 kB/s
+http_req_blocked...............: avg=9.13µs  min=0s    med=2µs    max=7.51ms   p(90)=4µs     p(95)=5µs
+http_req_connecting............: avg=5.11µs  min=0s    med=0s     max=7.16ms   p(90)=0s      p(95)=0s
+http_req_duration..............: avg=6.99ms  min=613µs med=2.03ms max=341.05ms p(90)=13.3ms  p(95)=25.72ms
+  { expected_response:true }...: avg=6.99ms  min=613µs med=2.03ms max=341.05ms p(90)=13.3ms  p(95)=25.72ms
+http_req_failed................: 0.00% ✓ 0          ✗ 70001
+http_req_receiving.............: avg=28.91µs min=4µs   med=20µs   max=13.51ms  p(90)=40µs    p(95)=53µs
+http_req_sending...............: avg=18.62µs min=2µs   med=11µs   max=15.18ms  p(90)=21µs    p(95)=30µs
+http_req_tls_handshaking.......: avg=0s      min=0s    med=0s     max=0s       p(90)=0s      p(95)=0s
+http_req_waiting...............: avg=6.94ms  min=585µs med=1.97ms max=341.03ms p(90)=13.23ms p(95)=25.63ms
+http_reqs......................: 70001 868.198154/s
+iteration_duration.............: avg=1s      min=1s    med=1s     max=1.34s    p(90)=1.01s   p(95)=1.02s
+iterations.....................: 70001 868.198154/s
+vus............................: 75    min=75       max=1000
+vus_max........................: 1000  min=1000     max=1000
 ```

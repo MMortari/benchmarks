@@ -1,13 +1,10 @@
 import http from "k6/http";
 import { sleep } from "k6";
 
-const vus = 1000;
-
 export const options = {
+  executor: "ramping-arrival-rate", //Assure load increase if the system slows
   stages: [
-    { duration: "10s", target: vus },
-    { duration: "1m", target: vus },
-    { duration: "10s", target: 0 },
+    { duration: "5m", target: 5000 }, // just slowly ramp-up to a HUGE load
   ],
 };
 
