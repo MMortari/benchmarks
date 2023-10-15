@@ -1,0 +1,27 @@
+@base = http://localhost:3333
+
+# @name test
+GET {{base}}
+
+###
+# @name create_person
+POST {{base}}/user
+Content-Type: application/json
+
+{
+  "name" : "andré",
+  "email" : "email@email.com"
+}
+
+###
+# @name list
+GET {{base}}/user
+
+###
+# @name get
+GET {{base}}/user/da94c9f4-a35b-4115-b773-bf914bd1b7a2
+
+
+###
+# @name list
+GET {{base}}/routes
